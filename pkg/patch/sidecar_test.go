@@ -9,10 +9,10 @@ import (
 func Test_Sidecar(t *testing.T) {
 	meta := SidecarMeta{
 		LogLevel:        "debug",
-		Region:          "us-west-2",
+		Region:          "us-east-1",
 		VirtualNodeName: "podinfo",
 		MeshName:        "global",
-		ContainerImage:  "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:latest",
+		ContainerImage:  "111345817488.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-envoy:v1.11.1.0-prod",
 		CpuRequests:     "100m",
 		MemoryRequests:  "128Mi",
 	}
@@ -22,10 +22,10 @@ func Test_Sidecar(t *testing.T) {
 func Test_Sidecar_WithXray(t *testing.T) {
 	meta := SidecarMeta{
 		LogLevel:          "debug",
-		Region:            "us-west-2",
+		Region:            "us-east-1",
 		VirtualNodeName:   "podinfo",
 		MeshName:          "global",
-		ContainerImage:    "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:latest",
+		ContainerImage:    "111345817488.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-envoy:v1.11.1.0-prod",
 		CpuRequests:       "100m",
 		MemoryRequests:    "128Mi",
 		InjectXraySidecar: true,
@@ -37,10 +37,10 @@ func Test_Sidecar_WithXray(t *testing.T) {
 func Test_Sidecar_WithStatsTags(t *testing.T) {
 	meta := SidecarMeta{
 		LogLevel:        "debug",
-		Region:          "us-west-2",
+		Region:          "us-east-1",
 		VirtualNodeName: "podinfo",
 		MeshName:        "global",
-		ContainerImage:  "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:latest",
+		ContainerImage:  "111345817488.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-envoy:v1.11.1.0-prod",
 		CpuRequests:     "100m",
 		MemoryRequests:  "128Mi",
 		EnableStatsTags: true,
@@ -53,10 +53,10 @@ func Test_Sidecar_WithStatsD(t *testing.T) {
 
 	meta := SidecarMeta{
 		LogLevel:                    "debug",
-		Region:                      "us-west-2",
+		Region:                      "us-east-1",
 		VirtualNodeName:             "podinfo",
 		MeshName:                    "global",
-		ContainerImage:              "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:latest",
+		ContainerImage:              "111345817488.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-envoy:v1.11.1.0-prod",
 		CpuRequests:                 "100m",
 		MemoryRequests:              "128Mi",
 		EnableStatsTags:             true,
