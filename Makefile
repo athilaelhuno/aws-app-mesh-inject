@@ -88,14 +88,14 @@ ecrsecrets:
 	kubectl patch deployment aws-app-mesh-inject -n aws-app-mesh-inject -p '$(shell cat ecr-secret-patch.json)'
 
 nssecrets:
-	$(eval export TOKEN=$(shell aws ecr get-authorization-token --region us-west-2 \
+	$(eval export TOKEN=$(shell aws ecr get-authorization-token --region us-east-1 \
 		--registry-ids 111345817488 \
 		--output text --query 'authorizationData[].authorizationToken' | \
 		base64 -D | \
 		cut -d: -f2))
 	kubectl delete secret --ignore-not-found appmesh-ecr-secret -n ${NAMESPACE}
 	@kubectl create secret docker-registry appmesh-ecr-secret -n ${NAMESPACE} \
-	 --docker-server=https://111345817488.dkr.ecr.us-west-2.amazonaws.com \
+	 --docker-server=https://111345817488.dkr.ecr.us-east-1.amazonaws.com \
 	 --docker-username=AWS \
 	 --docker-password="${TOKEN}" \
 	 --docker-email="to-be@deprecated.com"
