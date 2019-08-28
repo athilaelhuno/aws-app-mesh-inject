@@ -14,7 +14,7 @@ func TestGeneratePatch_AppendSidecarFalse(t *testing.T) {
 		Init: InitMeta{
 			Ports:              "80,443",
 			EgressIgnoredPorts: "22",
-			ContainerImage:     "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-proxy-route-manager:v2",
+			ContainerImage:     "059588584554.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-proxy-route-manager:v2",
 			IgnoredIPs:         "169.254.169.254",
 		},
 		Sidecar: SidecarMeta{
@@ -22,7 +22,7 @@ func TestGeneratePatch_AppendSidecarFalse(t *testing.T) {
 			VirtualNodeName:   "podinfo",
 			Region:            "us-west-2",
 			LogLevel:          "debug",
-			ContainerImage:    "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:latest",
+			ContainerImage:    "111345817488.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-envoy:v1.11.1.0-prod",
 			CpuRequests:       "10m",
 			MemoryRequests:    "32Mi",
 			InjectXraySidecar: true,
@@ -47,7 +47,7 @@ func TestGeneratePatch_AppendSidecarTrue(t *testing.T) {
 		Init: InitMeta{
 			Ports:              "80,443",
 			EgressIgnoredPorts: "22",
-			ContainerImage:     "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-proxy-route-manager:v2",
+			ContainerImage:     "059588584554.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-proxy-route-manager:v2",
 			IgnoredIPs:         "169.254.169.254",
 		},
 		Sidecar: SidecarMeta{
@@ -55,7 +55,7 @@ func TestGeneratePatch_AppendSidecarTrue(t *testing.T) {
 			VirtualNodeName:   "podinfo",
 			Region:            "us-west-2",
 			LogLevel:          "debug",
-			ContainerImage:    "111345817488.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:latest",
+			ContainerImage:    "111345817488.dkr.ecr.us-east-1.amazonaws.com/aws-appmesh-envoy:v1.11.1.0-prod",
 			CpuRequests:       "10m",
 			MemoryRequests:    "32Mi",
 			InjectXraySidecar: true,
