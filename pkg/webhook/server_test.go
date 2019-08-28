@@ -125,7 +125,7 @@ func mockServer() *Server {
 	cfg := config.Config{
 		Port:     8080,
 		MeshName: "global",
-		Region:   "us-west-2",
+		Region:   "us-east-1",
 		LogLevel: "debug",
 	}
 
